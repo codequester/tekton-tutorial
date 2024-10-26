@@ -94,6 +94,9 @@ spec:
       volumeMounts:
         - name: varlibc
           mountPath: /var/lib/containers
+      securityContext:
+        capabilities:
+          add: ["SETFCAP"]          
   volumes:
     - name: varlibc
       emptyDir: {}

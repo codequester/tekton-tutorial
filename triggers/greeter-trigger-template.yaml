@@ -31,7 +31,8 @@ spec:
             value: quarkus
           - name: image-name
             # For OpenShift builds, this should be patched to point to a suitable image stream for the project
-            value: example.com/tekton-tutorial/greeter
+            #value: example.com/tekton-tutorial/greeter
+            value: image-registry.openshift-image-registry.svc:5000/triggers-demo/greeter
         workspaces:
           - name: maven-settings
             configmap:
